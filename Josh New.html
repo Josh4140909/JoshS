@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Josh Dark Web</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+            animation: fadeInUp 1s forwards;
+        }
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('josh.gif'); /* Set the background image */
+            background-size: cover;
+            background-position: center;
+            opacity: 0.7; /* Adjust the opacity (lower for more transparency) */
+            z-index: -1; /* Ensure the overlay is behind the content */
+        }
+        header {
+            position: absolute;
+            top: 0;
+            right: 2px;
+            width: 100%;
+            padding: 1em 50px;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 10;
+        }
+        nav {
+            display: flex;
+            gap: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            justify-content: right;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            margin-top: 20px;
+        }
+        nav a:hover {
+            color: #ff0000;
+        }
+        nav b {
+            margin-right: 1350px;
+            margin-top: 20px;
+            font-color: white;
+        }
+        .fblogo {
+            width: 70px;
+            height: 70px;
+            margin-right: 10px;
+        }
+        .iglogo {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 12px;
+        }
+        h2 {
+            color: red;
+        }
+        h4 {
+            color: red;
+            margin-left: 10px;
+            margin-bottom: 5px;
+        }
+        .content {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            justify-content: center;
+            margin-left: 30px;
+            margin-right: 200px;
+			margin-top: 30px;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            font-size: 18px;
+        }
+        .image-container {
+            position: center;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            transform: translate(-50%, -50%);
+            margin-bottom: 10px;
+            margin-top: 700px;
+            margin-left: 500px;
+        }
+        .image {
+            width: 500px;
+            height: 650px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .hover-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .image-container:hover .hover-image {
+            opacity: 1;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        .logo-container {
+            position: relative;
+            width: 60px;
+            height: 60px;
+        }
+        .logo, .hover-logo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: opacity 0.3s ease;
+        }
+        .hover-logo {
+            opacity: 0;
+        }
+        .logo-container:hover .hover-logo {
+            opacity: 1;
+        }
+        #myParagraph {
+            opacity: 0;
+            height: 0;
+            overflow: hidden;
+            transition: opacity 1.5s ease-in-out, height 1.5s ease-in-out;
+        }
+        #myParagraph.visible {
+            opacity: 1;
+            height: auto;
+        }
+        #hiddenVideo {
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+            display: none;
+            max-width: 100%;
+            max-height: 500px;
+        }
+        #hiddenVideo.visible {
+            opacity: 1;
+            display: block;
+        }
+
+        .flickering-text {
+            position: absolute;
+            font-size: 24px;
+            font-weight: bold;
+            color: red;
+            text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 20px #ff0000;
+            animation: flicker 0.1s infinite alternate;
+        }
+        @keyframes flicker {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        footer {
+            text-align: center;
+            padding: 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            color: white;
+            font-size: 20px;
+            background: rgba(0, 0, 0, 0.8); /* Footer background */
+        }
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(100px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <a href="Josh New.html">
+                    <img src="sidelogo.png" alt="Logo" class="logo">
+                    <img src="sidelogo2.png" alt="Hover Logo" class="hover-logo">
+                </a>
+            </div>
+            <b>They are watching us!</b>
+            <a href="Josh New.html">Home</a>
+            <a href="ITBLOG.html">Blog</a>
+            <a href="FLEX.html">Flex</a>
+        </nav>
+    </header>
+    <div class="image-container">
+        <img src="image.png" class="image">
+        <img src="hoverimage.gif" class="hover-image">
+    </div>
+    <div class="content">
+        <h2>Welcome Strangers!</h2>
+        <h1>This is Joshua Serrano</h1>
+        <p>Top secret information:</p>
+        <button onclick="toggleParagraph()">Click here to reveal</button>
+        <div class="container">
+            <p id="myParagraph">
+                A 20-year-old born on January 3, 2004. He has a passion for creativity, which 
+                shines through in his hobbies like drawing and editing. He loves watching movies 
+                and exploring outdoors through hiking. He also practices tattooing, which 
+                allows him to express his artistic side and try new things. One of his 
+                strengths is being an active listener, which helps him connect with others and 
+                understand their perspectives.
+            </p>
+           
+            <video id="hiddenVideo" controls>
+                <source src="gg.mp4" type="video/mp4">
+                
+            </video>
+        </div>
+        <h4>My Socials:</h4>
+        <a href="https://www.facebook.com/JOSHUASERRANO619"><img src="joshlogo.png" alt="fbLogo" class="fblogo"></a>
+        <a href="https://www.instagram.com/JOSHUASERRANO619"><img src="instalogo.png" alt="igLogo" class="iglogo"></a>
+    </div>
+
+    <script>
+        function toggleParagraph() {
+            var paragraph = document.getElementById("myParagraph");
+            paragraph.classList.toggle("visible");
+
+            var video = document.getElementById("hiddenVideo");
+            // Toggle the visibility and apply fade effect to the video when the paragraph is revealed
+            if (paragraph.classList.contains("visible")) {
+                video.classList.add("visible"); // Make the video fade in
+            } else {
+                video.classList.remove("visible"); // Make the video fade out
+            }
+        }
+
+        function createFlickeringText() {
+            const text = document.createElement("div");
+            text.classList.add("flickering-text");
+            text.textContent = "HELP ME!";
+            
+            const x = Math.random() * window.innerWidth;
+            const y = Math.random() * window.innerHeight;
+
+            text.style.left = `${x}px`;
+            text.style.top = `${y}px`;
+
+            document.body.appendChild(text);
+
+            setTimeout(() => {
+                text.remove();
+            }, Math.random() * 2000 + 1000);
+        }
+
+        setInterval(createFlickeringText, 500);
+    </script>
+
+    <footer>
+        <p>&copy; Joshua Serrano 2024</p>
+    </footer>
+</body>
+</html>

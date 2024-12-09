@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Josh Dark Web</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+            animation: fadeInUp 1s forwards;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('josh1.gif');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.7;
+            z-index: -1;
+        }
+        header {
+            position: absolute;
+            top: 0;
+			right: 2px;
+            width: 100%;
+            padding: 1em 50px;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 10;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            justify-content: right;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        nav a:hover {
+            color: #ff0000;
+        }
+
+        nav b {
+            margin-right: 1350px;
+            margin-top: 20px;
+            font-color: white;
+        }
+
+        .container-wrapper {
+            display: flex;
+            gap: 15px;
+            overflow-x: auto;
+            padding: 20px;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        .glass-container {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 20px;
+            width: 350px;
+            height: 150px;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+            position: relative;
+            flex-shrink: 0;
+            background-image: url('trophy.gif');
+            background-size: cover;
+            background-position: center;
+            margin-top: 250px;
+            margin-left: 170px;
+            transition: background-image 0.3s ease;
+        }
+
+        .glass-container:hover:nth-child(1) {
+            background-image: url('blog11.jpg');
+        }
+
+        .glass-container:hover:nth-child(2) {
+            background-image: url('blog22.jpg');
+        }
+
+        .glass-container:hover:nth-child(3) {
+            background-image: url('blog33.jpg');
+        }
+
+        .glass-container:hover h3,
+        .glass-container:hover p {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .glass-container h3 {
+            margin-top: 0;
+            color: black;
+        }
+
+        .glass-container p {
+            margin-bottom: 10px;
+            font-size: 20px;
+            line-height: 1.6;
+			color: black;
+        }
+
+        .logo-container {
+            position: relative;
+            width: 60px;
+            height: 60px;
+        }
+
+        .logo, .hover-logo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: opacity 0.3s ease;
+        }
+
+        .hover-logo {
+            opacity: 0;
+        }
+
+        .logo-container:hover .hover-logo {
+            opacity: 1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            font-size: 18px;
+            position: fixed;
+            bottom: 0;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(100px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <a href="Josh New.html">
+                    <img src="sidelogo.png" alt="Logo" class="logo">
+                    <img src="sidelogo2.png" alt="Hover Logo" class="hover-logo">
+                </a>
+            </div>
+            <b>They are watching us!</b>
+            <a href="Josh New.html">Home</a>
+            <a href="ITBLOG.html">Blog</a>
+            <a href="FLEX.html">Flex</a>
+        </nav>
+    </header>
+
+    <div class="container-wrapper">
+  
+        <div class="glass-container">
+            <h3>My first Digital Character</h3>
+        </div>
+
+        <div class="glass-container">
+            <h3>My first Traditional Character</h3>
+        </div>
+
+        <div class="glass-container">
+            <h3>High School Graduate</h3>
+        </div>
+        
+    </div>
+
+    <footer>
+        <p>&copy; Joshua Serrano 2024</p>
+    </footer>
+</body>
+</html>
