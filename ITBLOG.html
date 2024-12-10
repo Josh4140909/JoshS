@@ -14,11 +14,7 @@
             align-items: center;
             position: relative;
             animation: fadeInUp 1s forwards;
-            width: 100vw;
-            height: 100vh;
         }
-
-        /* Pseudo-element to overlay background image with opacity */
         body::before {
             content: "";
             position: absolute;
@@ -75,7 +71,7 @@
             padding: 20px;
             width: 100%;
             box-sizing: border-box;
-            margin-top: 150px; /* Add space from header */
+            margin-top: 150px;
         }
 
         .glass-container {
@@ -97,7 +93,7 @@
             background-size: cover;
             background-position: center;
             transition: background-image 0.3s ease;
-			margin-left: 50px;
+	    margin-left: 50px;
         }
 
         .glass-container:hover:nth-child(1) {
@@ -168,8 +164,6 @@
             position: relative;
             margin-top: 30px;
         }
-
-        /* Styles for video containers */
         .video-container {
             display: flex;
             justify-content: center;
