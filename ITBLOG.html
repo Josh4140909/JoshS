@@ -9,16 +9,15 @@
             color: white;
             background-size: cover;
             background-position: center;
-            min-height: 100vh; /* Allow content to extend beyond the viewport */
+            min-height: 100vh;
             display: flex;
-            flex-direction: column; /* Stack content vertically */
+            flex-direction: column;
             align-items: center;
-            overflow-y: auto; /* Enable vertical scrolling */
+            overflow-y: auto;
             position: relative;
             animation: fadeInUp 1s forwards;
         }
 
-        /* Pseudo-element to overlay background image with opacity */
         body::before {
             content: "";
             position: absolute;
@@ -26,11 +25,11 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('josh1.gif'); /* Set the background image */
+            background-image: url('josh1.gif');
             background-size: cover;
             background-position: center;
-            opacity: 0.7; /* Adjust the opacity (lower for more transparency) */
-            z-index: -1; /* Ensure the overlay is behind the content */
+            opacity: 0.7;
+            z-index: -1;
         }
 
         header {
@@ -70,12 +69,12 @@
 
         .container-wrapper {
             display: flex;
-            gap: 15px; /* Space between horizontal containers */
-            overflow-x: auto; /* Adds horizontal scrolling for smaller screens */
+            gap: 15px;
+            overflow-x: auto;
             padding: 20px;
             width: 100%;
             box-sizing: border-box;
-            margin-top: 150px; /* Add space from header */
+            margin-top: 150px;
         }
 
         .glass-container {
@@ -101,26 +100,25 @@
         }
 
         .glass-container:hover:nth-child(1) {
-            background-image: url('blog1.jpg'); /* First container background on hover */
+            background-image: url('blog1.jpg');
         }
 
         .glass-container:hover:nth-child(2) {
-            background-image: url('blog2.jpg'); /* Second container background on hover */
+            background-image: url('blog2.jpg');
         }
 
         .glass-container:hover:nth-child(3) {
-            background-image: url('blog3.jpg'); /* Third container background on hover */
+            background-image: url('blog3.jpg');
         }
 
         .glass-container:hover:nth-child(4) {
-            background-image: url('blog4.jpg'); /* Fourth container background on hover */
+            background-image: url('blog4.jpg');
         }
 
-        /* Make text disappear on hover */
         .glass-container:hover h3,
         .glass-container:hover p {
-            opacity: 0; /* Make text invisible */
-            transition: opacity 0.3s ease; /* Smooth transition for text disappearance */
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
 
         .glass-container h3 {
@@ -170,7 +168,6 @@
             margin-top: 30px;
         }
 
-        /* Styles for video containers */
         .video-container {
             display: flex;
             justify-content: center;
@@ -208,13 +205,13 @@
     <header>
         <nav>
             <div class="logo-container">
-                <a href="Josh New.html">
+                <a href="index.html">
                     <img src="sidelogo.png" alt="Logo" class="logo">
                     <img src="sidelogo2.png" alt="Hover Logo" class="hover-logo">
                 </a>
             </div>
             <b>They are watching us!</b>
-            <a href="Josh New.html">Home</a>
+            <a href="index.html">Home</a>
             <a href="ITBLOG.html">Blog</a>
             <a href="FLEX.html">Flex</a>
         </nav>
@@ -242,7 +239,6 @@
         </div>
     </div>
 
-    <!-- Video Containers Section Below the Glass Containers -->
     <div class="video-container">
         <video controls>
             <source src="vid1.mp4" type="video/mp4">
